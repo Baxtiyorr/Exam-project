@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    max-width: 1230px;
+    max-width: 1096px;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
@@ -19,3 +19,5 @@ body {
 @import './fonts';
 @import './varibles';
 @import './mixins';
+@import './generals';
+@import './all-blocks/header';
