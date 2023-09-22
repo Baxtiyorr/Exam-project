@@ -33,6 +33,7 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 20;
 }
 
 .navbar {
@@ -73,16 +74,18 @@ nav {
   font-size: 15px;
   line-height: 25px;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 3px solid transparent;
   transition: 0.5s;
 }
 .navbar-btn:hover,
 .navbar .navbar__menu-btn--desktop:hover {
-  scale: 1.1;
+  background-color: transparent;
+  color: #FCB72B;
+  border: 3px solid #FCB72B;
 }
 .navbar-btn:active,
 .navbar .navbar__menu-btn--desktop:active {
-  scale: 1;
+  background-color: #FCB72B;
 }
 
 .navbar__menu-btn--desktop {
@@ -123,7 +126,7 @@ nav {
     flex-direction: column;
     height: 603px;
     position: fixed;
-    top: 123px;
+    top: 96px;
     left: 0;
     background-color: #333A44;
     width: 256px;
@@ -156,14 +159,16 @@ nav {
     font-size: 15px;
     line-height: 25px;
     cursor: pointer;
-    border: 1px solid transparent;
+    border: 3px solid transparent;
     transition: 0.5s;
   }
   .navbar__menu-btn:hover {
-    scale: 1.1;
+    background-color: transparent;
+    color: #FCB72B;
+    border: 3px solid #FCB72B;
   }
   .navbar__menu-btn:active {
-    scale: 1;
+    background-color: #FCB72B;
   }
   .navbar__menu-btn--desktop {
     display: none;
@@ -222,15 +227,17 @@ nav {
   font-size: 15px;
   line-height: 25px;
   background-color: #FCB72B;
-  border: 1px solid transparent;
+  border: 3px solid transparent;
   transition: 0.5s;
   cursor: pointer;
 }
 .hero__content-wrapper-btn:hover {
-  scale: 1.1;
+  background-color: transparent;
+  color: #FCB72B;
+  border: 3px solid #FCB72B;
 }
 .hero__content-wrapper-btn:active {
-  scale: 1;
+  background-color: #FCB72B;
 }
 
 header {
@@ -275,7 +282,7 @@ header {
     display: none;
   }
   .arrow {
-    top: 622px;
+    top: 580px;
     right: 429px;
   }
   .hero {
@@ -285,5 +292,104 @@ header {
 @media only screen and (max-width: 882px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 882px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 882px) and (min-device-pixel-ratio: 2), only screen and (max-width: 882px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 882px) and (min-resolution: 192dpi), only screen and (max-width: 882px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url("../imges/scooter-2x.jpg");
+  }
+}
+.ability {
+  margin-top: 160px;
+}
+
+.ability-container {
+  position: relative;
+}
+
+hr {
+  width: 947px;
+  border: 10px solid #E5ECF4;
+  position: absolute;
+  top: 0;
+  left: -186px;
+}
+
+.circle {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: #FCB72B;
+  padding: 28px;
+  text-align: center;
+}
+
+.circles {
+  display: flex;
+  align-items: center;
+  column-gap: 284px;
+  position: absolute;
+  top: -41px;
+  left: 6px;
+}
+
+.ability__content {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  padding-top: 110px;
+}
+.ability__content-info h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  font-family: "Space Mono", monospace;
+  color: #495567;
+}
+.ability__content-info p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #939CAA;
+  margin-top: 27px;
+  max-width: 350px;
+}
+
+@media screen and (max-width: 882px) {
+  hr {
+    width: 0px;
+    height: 601px;
+    border-left: 10px solid #E5ECF4;
+    top: -160px;
+    left: 137px;
+  }
+  .circles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 74px;
+    top: 118px;
+    left: 98px;
+  }
+  .ability__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  hr {
+    display: none;
+  }
+  .circles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 224px;
+    top: 0;
+    left: 0;
+  }
+  .ability__content {
+    row-gap: 128px;
+    text-align: center;
+  }
+  .ability__content-info {
+    margin-bottom: 48px;
   }
 }/*# sourceMappingURL=main.css.map */

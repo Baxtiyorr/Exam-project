@@ -3,6 +3,7 @@ nav {
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 20;
 }
 
 .navbar {
@@ -42,16 +43,18 @@ nav {
         font-size: 15px;
         line-height: 25px;
         cursor: pointer;
-        border: 1px solid transparent;
+        border: 3px solid transparent;
         transition: 0.5s;
     }
     &-btn:hover,
     .navbar__menu-btn--desktop:hover {
-        scale: (1.1);
+        background-color: transparent;
+        color: $main-btn-color;
+        border: 3px solid $main-btn-color;
     }
     &-btn:active,
     .navbar__menu-btn--desktop:active {
-        scale: (1);
+        background-color: $main-btn-color;
     }
 }
 
@@ -93,7 +96,7 @@ nav {
         flex-direction: column;
         height: 603px;
         position: fixed;
-        top: 123px;
+        top: 96px;
         left: 0;
         background-color: #333A44;
         width: 256px;
@@ -125,14 +128,16 @@ nav {
             font-size: 15px;
             line-height: 25px;
             cursor: pointer;
-            border: 1px solid transparent;
+            border: 3px solid transparent;
             transition: 0.5s;
         }
         &-btn:hover {
-            scale: (1.1);
+            background-color: transparent;
+            color: $main-btn-color;
+            border: 3px solid $main-btn-color;
         }
         &-btn:active {
-            scale: (1);
+            background-color: $main-btn-color;
         }
     }
     .navbar__menu-btn--desktop {
@@ -192,15 +197,17 @@ nav {
         font-size: 15px;
         line-height: 25px;
         background-color: $main-btn-color;
-        border: 1px solid transparent;
+        border: 3px solid transparent;
         transition: 0.5s;
         cursor: pointer;
     }
     &-btn:hover {
-        scale: (1.1);
+        background-color: transparent;
+        color: $main-btn-color;
+        border: 3px solid $main-btn-color;
     }
     &-btn:active {
-        scale: (1);
+        background-color: $main-btn-color;
     }
 }
 
@@ -252,7 +259,7 @@ only screen and (min-resolution: 2dppx) {
         display: none;
     }
     .arrow {
-        top: 622px;
+        top: 580px;
         right: 429px
     }
     .hero {
@@ -268,4 +275,8 @@ only screen and (min-resolution: 2dppx) {
             background-image: url('../imges/scooter-2x.jpg');
         }
     }
+}
+
+@include fro-mobile {
+    .arrow {}
 }
